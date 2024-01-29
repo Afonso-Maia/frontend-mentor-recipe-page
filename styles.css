@@ -1,0 +1,166 @@
+:root {
+  /* primary */
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  /* neutrals */
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  color: var(--wenge-brown);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding-block: 120px;
+  margin: 0;
+  background-color: var(--eggshell);
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  color: var(--dark-charcoal);
+}
+
+h2,
+h3 {
+  color: var(--nutmeg);
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0 0 24px 0;
+}
+
+h3 {
+  margin: 0 0 16px 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--wenge-brown);
+}
+
+ul {
+  margin: 0;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+ul li {
+  padding-left: 18px;
+  line-height: 150%;
+  font-size: 16px;
+}
+
+.container {
+  width: 736px;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: var(--white);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.divider {
+  width: 100%;
+  background-color: var(--light-grey);
+  margin: 0;
+}
+
+.img {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.preptime {
+  color: var(--wenge-brown);
+  padding: 28px;
+  background-color: var(--rose-white);
+}
+
+.preptime h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ingredients {
+  color: var(--wenge-brown);
+}
+
+.instructions ul {
+  list-style: decimal;
+}
+
+.instructions ul li::marker {
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+
+.table {
+  display: grid;
+  width: 100%;
+  gap: 12px;
+}
+
+.row {
+  padding-inline: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.row p {
+  flex-grow: 1;
+}
+
+.row p:not(:first-child) {
+  color: var(--nutmeg);
+}
+
+@media (width < 736px) {
+  body {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .img {
+    height: 171px;
+    border-radius: 0;
+  }
+
+  .content {
+    padding: 40px 32px;
+  }
+}
